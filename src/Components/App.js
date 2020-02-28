@@ -1,52 +1,24 @@
 import React from "react";
 
-export default class App extends React.Component {
-  constructor(props) {
-    super(props);
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Home from "../pages/Home";
+import Navbar from "./Navbar";
+import About from "../pages/About";
 
-    this.state = {
-      data: {
-        results: []
-      },
-      loading: false,
-      error: false
-    };
-  }
+export default function App() {
+  const routes = [
+    { component: Home, path: "/" },
+    { component: About, path: "/about" }
+  ];
 
-  componentDidMount() {
-    this.fetchCharacters();
-  }
-
-  fetchCharacters = async () => {
-    this.setState({ loading: true });
-
-    const API_URL = "https://rickandmortyapi.com/api/character";
-    const response = await fetch(API_URL);
-    const characters = await response.json();
-
-    this.setState({
-      data: characters,
-      loading: false
-    });
-  };
-
-  render() {
-    if (this.state.loading) {
-      return <p>loading...</p>;
-    }
-
-    return (
-      <div className="App">
-        <h1>Experimental fetch</h1>
-        <ul>
-          {this.state.data.results.map(charachter => (
-            <li key={charachter.id}>
-              <h2>{charachter.name}</h2>
-              <p>{charachter.status}</p>
-            </li>
-          ))}
-        </ul>
-      </div>
-    );
-  }
+  return (
+    <Router>
+      <Navbar />
+      <Switch>
+        {routes.map(route => (
+          <Route exact component={route.component} path={route.path} />
+        ))}
+      </Switch>
+    </Router>
+  );
 }
