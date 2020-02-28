@@ -1,0 +1,45 @@
+.Home {
+  width: 90%;
+  margin: 50px auto 15px auto;
+}
+
+.Home__header-littleText {
+  font-size: 0.7rem;
+  font-weight: bold;
+  color: #9b9b9b;
+  margin-bottom: 25px;
+}
+
+.Home__header-titlePage {
+  font-size: 3rem;
+  margin: 5px 0;
+}
+
+.Home__header-fans {
+  font-size: 1.8rem;
+  font-weight: 300;
+  color: rgb(43, 226, 98);
+}
+
+.Home__header-descriptionApp {
+  margin-top: 25px;
+  font-weight: bold;
+  color: #575757;
+  font-size: 0.8rem;
+  line-height: 1.6;
+}
+
+.Home__header-descriptionApp span {
+  display: block;
+  font-size: 0.7rem;
+  line-height: 1.6;
+  margin-top: 10px;
+  font-weight: initial;
+  color: black;
+}
+
+.Home__header-descriptionApp span a {
+  color: rgb(0, 153, 255);
+  text-decoration: underline;
+  font-weight: bold;
+}
