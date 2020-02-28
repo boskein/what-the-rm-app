@@ -1,0 +1,40 @@
+.Character {
+  width: 90%;
+  margin: 0 auto;
+  list-style: none;
+  overflow: hidden;
+  border-radius: 5px;
+  margin-bottom: 25px;
+
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.Character__info {
+  padding: 15px 20px;
+}
+
+.Character__info-name {
+  text-align: center;
+  font-size: 1.4rem;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+  border-bottom: solid 1px #e3e3e3;
+}
+
+.Character__subInfo {
+  color: #919191;
+  font-size: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Character__info-statusAlive {
+  color: #00d35f;
+  font-weight: bold;
+}
+
+.Character__info-statusDead {
+  color: #dd4040;
+  font-weight: bold;
+}

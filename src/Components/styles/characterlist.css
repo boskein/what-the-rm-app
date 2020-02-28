@@ -1,0 +1,24 @@
+.CharacterList {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.CharacterList__header {
+  text-align: center;
+  padding-bottom: 25px;
+  margin-bottom: 25px;
+  border-bottom: solid 1px #e3e3e3;
+}
+
+.CharacterList__header-title {
+  margin-bottom: 5px;
+}
+
+.CharacterList__header-description {
+  color: #575757;
+  font-size: 0.7rem;
+}

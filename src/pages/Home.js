@@ -2,6 +2,7 @@ import React from "react";
 
 import "./styles/home.css";
 import { Link } from "react-router-dom";
+import CharacterListContainer from "../Components/CharacterListContainer";
 
 export default function Home() {
   return (
@@ -20,6 +21,9 @@ export default function Home() {
           </span>
         </p>
       </header>
+      <main className="Home__main">
+        <CharacterListContainer />
+      </main>
     </div>
   );
 }
