@@ -1,0 +1,51 @@
+.Navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 25px;
+  margin: 25px 0;
+
+  border-bottom: solid 1px #e3e3e3;
+}
+
+.Navbar__rickFace {
+  width: 35px;
+  transform: rotate(-10deg);
+  animation: animateRick 1s alternate infinite;
+}
+
+@keyframes animateRick {
+  0% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(-10deg);
+  }
+}
+
+.Navbar__links a {
+  color: black;
+  text-decoration: none;
+  margin-left: 5px;
+  padding: 4px 8px;
+  font-size: 0.9rem;
+  color: #8d8d8d;
+  font-weight: bold;
+
+  transition: all 0.3s ease;
+}
+
+.Navbar__links a:active {
+  background-color: transparent;
+}
+
+.activeLink {
+  background-color: #e3e3e3;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+  color: rgb(0, 155, 202) !important;
+}
