@@ -1,5 +1,6 @@
 import React from "react";
 import CharacterList from "./CharacterList";
+import Loading from "./Loading";
 
 export default class CharacterListContainer extends React.Component {
   constructor(props) {
@@ -33,6 +34,9 @@ export default class CharacterListContainer extends React.Component {
   };
 
   render() {
+    if (this.state.loading) {
+      return <Loading />;
+    }
     return <CharacterList characters={this.state.data.results} />;
   }
 }

@@ -1,4 +1,5 @@
 import React from "react";
+import Loading from "../Components/Loading";
 
 export default class ViewCharacter extends React.Component {
   constructor(props) {
@@ -30,6 +31,10 @@ export default class ViewCharacter extends React.Component {
   };
 
   render() {
+    if (this.state.loading) {
+      return <Loading />;
+    }
+
     return (
       <div>
         <h1>{this.state.data.name}</h1>

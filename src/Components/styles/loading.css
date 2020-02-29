@@ -1,0 +1,38 @@
+.Loading {
+  width: 35px;
+  height: 70px;
+  background-image: url("../../images/picklerick.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 25px auto;
+}
+
+.appear {
+  animation: appearDesappear 0.5s ease forwards, rotatePickle 1s ease infinite;
+}
+
+.desappear {
+  animation: appearDesappear 0.5s ease reverse forwards,
+    rotatePickle 1s ease infinite;
+}
+
+@keyframes rotatePickle {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes appearDesappear {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
