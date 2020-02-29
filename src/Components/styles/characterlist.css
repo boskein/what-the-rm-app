@@ -22,3 +22,19 @@
   color: #575757;
   font-size: 0.7rem;
 }
+
+@media only screen and (min-width: 1280px) {
+  .CharacterList__list {
+    width: 120%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .CharacterList__list {
+    width: 105%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

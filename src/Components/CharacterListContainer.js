@@ -22,7 +22,7 @@ export default class CharacterListContainer extends React.Component {
   fetchCharacters = async () => {
     this.setState({ loading: true });
 
-    const API_URL = "https://rickandmortyapi.com/api/character/";
+    const API_URL = "https://rickandmortyapi.com/api/character";
     const response = await fetch(API_URL);
     const characters = await response.json();
 
