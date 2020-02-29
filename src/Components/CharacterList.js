@@ -1,7 +1,7 @@
 import React from "react";
 import Character from "./Character";
 
-import './styles/characterlist.css';
+import "./styles/characterlist.css";
 
 export default function CharacterList(props) {
   return (
@@ -15,6 +15,7 @@ export default function CharacterList(props) {
       <div className="CharacterList__list">
         {props.characters.map(character => (
           <Character
+            idCharacter={character.id}
             idkey={character.id}
             image={character.image}
             name={character.name}

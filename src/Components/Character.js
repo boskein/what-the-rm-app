@@ -1,6 +1,7 @@
 import React from "react";
 
 import "./styles/character.css";
+import { Link } from "react-router-dom";
 
 export default function Character(props) {
   const imageStyle = {
@@ -26,6 +27,9 @@ export default function Character(props) {
           {props.status === "Dead" && (
             <p className="Character__info-statusDead">{props.status}</p>
           )}
+        </div>
+        <div className="Character__info-btnVerMas">
+          <Link to={`/character/${props.idCharacter}`}>See more</Link>
         </div>
       </div>
     </li>
