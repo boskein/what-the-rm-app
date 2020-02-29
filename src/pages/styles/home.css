@@ -43,3 +43,10 @@
   text-decoration: underline;
   font-weight: bold;
 }
+
+@media only screen and (min-width: 1280px) {
+  .Home__header {
+    width: 65%;
+    margin: 100px auto;
+  }
+}
