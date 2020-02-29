@@ -24,6 +24,7 @@ export default function CharacterList(props) {
           />
         ))}
       </div>
+      
     </div>
   );
 }
