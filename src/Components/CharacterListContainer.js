@@ -50,7 +50,7 @@ export default class CharacterListContainer extends React.Component {
           className="LoadMoreContent-button"
           onClick={() => this.fetchCharacters()}
         >
-          Ver mas
+          Load more...
         </button>
       </React.Fragment>
     );
