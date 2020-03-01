@@ -44,18 +44,16 @@ export default class ViewCharacterContainer extends React.Component {
     const { data } = this.state;
 
     return (
-      <React.Fragment>
-        <ViewCharacter
-          name={data.name}
-          image={data.image}
-          status={data.status}
-          specie={data.species}
-          gender={data.gender}
-          location={data.location.name}
-          origin={data.origin.name}
-          numberEpisodes={data.episode.length}
-        />
-      </React.Fragment>
+      <ViewCharacter
+        name={data.name}
+        image={data.image}
+        status={data.status}
+        specie={data.species}
+        gender={data.gender}
+        location={data.location.name}
+        origin={data.origin.name}
+        numberEpisodes={data.episode.length}
+      />
     );
   }
 }

@@ -13,8 +13,8 @@ export default function Home() {
         <p className="Home__header-fans">Fans</p>
         <p className="Home__header-descriptionApp">
           Just for training, a simple app. Here you can see all the characters
-          of the series, search by name and see more information about each
-          character.
+          of the series, load more and more characters, and see more information
+          about each character.
           <br />
           <span>
             If you want to see more thecnical information about the construction

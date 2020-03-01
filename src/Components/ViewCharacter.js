@@ -1,16 +1,27 @@
 import React from "react";
 
+import "./styles/viewcharacter.css";
+
 export default function ViewCharacter(props) {
   return (
-    <div>
-      <img src={props.image} alt={`${props.name} avatar`} />
-      <h2>{props.name}</h2>
+    <div className="ViewCharacter">
+      <div className="ViewCharacter__principalInfo">
+        <img
+          className="ViewCharacter__principalInfo-image"
+          src={props.image}
+          alt={`${props.name} avatar`}
+        />
+        <h2 className="ViewCharacter__principalInfo-name">- {props.name} -</h2>
+      </div>
 
-      <ul>
-        <div>
+      <ul className="ViewCharacter__moreInfo">
+        <div className="ViewCharacter__moreInfo-infoBlock">
           <li>
             <p>Status:</p>
-            <p>{props.status}</p>
+            {props.status === "Alive" && (
+              <p className="Alive">{props.status}</p>
+            )}
+            {props.status === "Dead" && <p className="Dead">{props.status}</p>}
           </li>
 
           <li>
@@ -24,10 +35,10 @@ export default function ViewCharacter(props) {
           </li>
         </div>
 
-        <div>
+        <div className="ViewCharacter__moreInfo-infoBlock">
           <li>
             <p>Origin:</p>
-            <p>{props.origin}</p>
+            <p className="ViewCharacter__moreInfo-Origin">{props.origin}</p>
           </li>
 
           <li>
@@ -36,11 +47,27 @@ export default function ViewCharacter(props) {
           </li>
         </div>
 
-        <li>
-          <p>Is in: </p>
-          {props.numberEpisodes === 1 && <p>{props.numberEpisodes} episode</p>}
-          {props.numberEpisodes > 1 && <p>{props.numberEpisodes} episodes</p>}
-        </li>
+        <div className="ViewCharacter__moreInfo-infoBlock">
+          <li>
+            <p>Is in: </p>
+            {props.numberEpisodes === 1 && (
+              <p>
+                <strong className="numberEpisodes">
+                  {props.numberEpisodes}
+                </strong>{" "}
+                episode
+              </p>
+            )}
+            {props.numberEpisodes > 1 && (
+              <p>
+                <strong className="numberEpisodes">
+                  {props.numberEpisodes}
+                </strong>{" "}
+                episodes
+              </p>
+            )}
+          </li>
+        </div>
       </ul>
     </div>
   );

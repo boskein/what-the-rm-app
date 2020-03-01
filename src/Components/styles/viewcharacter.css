@@ -1,0 +1,88 @@
+.ViewCharacter__principalInfo {
+  padding: 25px 0;
+  margin-bottom: 25px;
+  border-bottom: solid 1px #e3e3e3;
+
+  opacity: 0;
+  animation: appearInfo 0.5s 0.1s ease forwards;
+}
+
+@keyframes appearInfo {
+  from: {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.ViewCharacter__principalInfo-image {
+  display: block;
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 10px;
+  margin-bottom: 25px;
+}
+
+.ViewCharacter__principalInfo-name {
+  text-align: center;
+  opacity: 0;
+
+  animation: appearInfo 0.5s 0.2s ease forwards;
+}
+
+.ViewCharacter__moreInfo {
+  width: 85%;
+  margin: 0 auto;
+  list-style: none;
+
+  opacity: 0;
+
+  animation: appearInfo 0.5s 0.3s ease forwards;
+}
+
+.ViewCharacter__moreInfo-infoBlock {
+  padding: 10px 0;
+  border-bottom: solid 1px #e3e3e3;
+  margin-bottom: 10px;
+}
+
+.ViewCharacter__moreInfo-infoBlock:last-child {
+  margin-bottom: 50px;
+}
+
+.ViewCharacter__moreInfo-infoBlock li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 0.8rem;
+}
+
+.ViewCharacter__moreInfo-infoBlock li p:first-child {
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.ViewCharacter__moreInfo-infoBlock li p:last-child {
+  text-align: end;
+}
+
+.ViewCharacter__moreInfo-Origin {
+  font-size: 0.7rem;
+}
+
+.numberEpisodes {
+  color: #006eff;
+}
+
+.Alive {
+  color: #00db49;
+  font-weight: bold;
+}
+
+.Dead {
+  color: #eb3f3f;
+  font-weight: bold;
+}
