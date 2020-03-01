@@ -86,3 +86,10 @@
   color: #eb3f3f;
   font-weight: bold;
 }
+
+@media only screen and (min-width: 1280px) {
+  .ViewCharacter__principalInfo-image {
+    width: 50%;
+    margin-bottom: 45px;
+  }
+}
