@@ -97,6 +97,7 @@
 
   .CharacterList__someInfo {
     width: 100%;
+    padding: 25px 0;
     display: flex;
     flex-direction: row;
     align-items: center;
