@@ -8,7 +8,7 @@
 }
 
 @keyframes appearInfo {
-  from: {
+  from {
     opacity: 0;
   }
   to {
