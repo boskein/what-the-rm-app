@@ -12,6 +12,18 @@ export default function CharacterList(props) {
           List of all characters of the series
         </p>
       </div>
+      <div className="CharacterList__someInfo">
+        <h2 className="CharacterList__someInfo-characters">
+          # Characters: <span>{props.numberCharacters}</span>{" "}
+        </h2>
+
+        <h2 className="CharacterList__someInfo-episodes">
+          # Episodes:{" "}
+          <span>
+            {props.numberEpisodes} <span>but it could be more...</span>
+          </span>{" "}
+        </h2>
+      </div>
       <div className="CharacterList__list">
         {props.characters.map(character => (
           <Character
@@ -24,7 +36,6 @@ export default function CharacterList(props) {
           />
         ))}
       </div>
-      
     </div>
   );
 }

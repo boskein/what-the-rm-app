@@ -1,11 +1,17 @@
 import React from "react";
 import Loading from "../Components/Loading";
+import ViewCharacter from "../Components/ViewCharacter";
+import CharacterListContainer from "../Components/CharacterListContainer";
 
-export default class ViewCharacter extends React.Component {
+export default class ViewCharacterContainer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: {},
+      data: {
+        origin: {},
+        location: {},
+        episode: []
+      },
       loading: false,
       error: false
     };
@@ -35,10 +41,21 @@ export default class ViewCharacter extends React.Component {
       return <Loading />;
     }
 
+    const { data } = this.state;
+
     return (
-      <div>
-        <h1>{this.state.data.name}</h1>
-      </div>
+      <React.Fragment>
+        <ViewCharacter
+          name={data.name}
+          image={data.image}
+          status={data.status}
+          specie={data.species}
+          gender={data.gender}
+          location={data.location.name}
+          origin={data.origin.name}
+          numberEpisodes={data.episode.length}
+        />
+      </React.Fragment>
     );
   }
 }

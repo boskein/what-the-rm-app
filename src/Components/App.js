@@ -5,7 +5,7 @@ import Home from "../pages/Home";
 import Navbar from "./Navbar";
 import About from "../pages/About";
 import Layout from "./Layout";
-import ViewCharacter from "../pages/ViewCharacter";
+import ViewCharacterContainer from "../pages/ViewCharacterContainer";
 
 export default function App() {
   return (
@@ -15,7 +15,7 @@ export default function App() {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/about" component={About} />
-          <Route exact path="/character/:cId" component={ViewCharacter} />
+          <Route exact path="/character/:cId" component={ViewCharacterContainer} />
         </Switch>
       </Layout>
     </Router>
